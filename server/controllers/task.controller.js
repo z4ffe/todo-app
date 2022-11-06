@@ -25,15 +25,18 @@ const taskController = {
 	  try {
 		 const task = new Task({task: req.body.task})
 		 await task.save()
-		 res.status(httpStatus.CREATED).send('Task created')
+		 const taskList = await Task.find({})
+		 res.status(httpStatus.CREATED).send(taskList)
 	  } catch (error) {
 		 next(error)
 	  }
    },
    async completeTask(req, res, next) {
+	  console.log(req.body)
 	  try {
-		 const task = await taskService.changeTaskStatusToComplete(req.body.id)
-		 res.status(httpStatus.OK).send(task)
+		 const task = await taskService.changeTaskStatusToComplete(req.body._id)
+		 const taskList = await Task.find({})
+		 res.status(httpStatus.OK).send(taskList)
 	  } catch (error) {
 		 next(error)
 	  }
@@ -43,7 +46,8 @@ const taskController = {
 		 console.log(req.body._id)
 		 const deletedTask = await Task.findByIdAndDelete(req.body._id)
 		 if (!deletedTask) res.status(httpStatus.NOT_FOUND).send('Task not found')
-		 res.status(httpStatus.OK).send(deletedTask)
+		 const taskList = await Task.find({})
+		 res.status(httpStatus.OK).send(taskList)
 	  } catch (error) {
 		 next(error)
 	  }

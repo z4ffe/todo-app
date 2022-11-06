@@ -1,12 +1,9 @@
-import {createAsyncThunk} from "@reduxjs/toolkit";
+import {createAsyncThunk, isAllOf} from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchAllTasks = createAsyncThunk('task/fetchAllTasks', async (data) => {
    try {
-	  const response = await axios({
-		 methods: "GET",
-		 url: `${process.env.REACT_APP_SERVER}/api/tasks`
-	  })
+	  const response = await axios.get(`${process.env.REACT_APP_SERVER}/api/tasks`)
 	  return response.data
    } catch (error) {
 	  throw error
@@ -15,9 +12,21 @@ export const fetchAllTasks = createAsyncThunk('task/fetchAllTasks', async (data)
 
 export const addTask = createAsyncThunk('task/addTask', async (data) => {
    try {
-	  await axios.post(`${process.env.REACT_APP_SERVER}/api/add`, {
+	  const response = await axios.post(`${process.env.REACT_APP_SERVER}/api/add`, {
 		 task: data
 	  })
+	  return response.data
+   } catch (error) {
+	  throw error
+   }
+})
+
+export const completeTask = createAsyncThunk('task/completeTask', async (data) => {
+   try {
+	  const response = await axios.patch(`${process.env.REACT_APP_SERVER}/api/complete`, {
+			_id: data._id
+	  })
+	  return response.data
    } catch (error) {
 	  throw error
    }
@@ -25,11 +34,12 @@ export const addTask = createAsyncThunk('task/addTask', async (data) => {
 
 export const deleteTaskById = createAsyncThunk('task/deleteTaskById', async (data) => {
    try {
-	  await axios.delete(`${process.env.REACT_APP_SERVER}/api/remove`, {
+	  const response = await axios.delete(`${process.env.REACT_APP_SERVER}/api/remove`, {
 		 data: {
 			_id: data._id
 		 }
 	  })
+	  return response.data
    } catch (error) {
 	  throw error
    }

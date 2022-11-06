@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {fetchAllTasks} from "../thunk/taskThunk";
+import {addTask, completeTask, deleteTaskById, fetchAllTasks} from "../thunk/taskThunk";
 
 export const taskSlice = createSlice({
    name: "task",
@@ -14,10 +14,19 @@ export const taskSlice = createSlice({
 	  })
 	  builder.addCase(fetchAllTasks.fulfilled, (state, action) => {
 		 state.loading = false
-		 state.tasks = [...state.tasks, ...action.payload]
+		 state.tasks = action.payload
 	  })
 	  builder.addCase(fetchAllTasks.rejected, (state) => {
 		 state.loading = false
+	  })
+	  builder.addCase(addTask.fulfilled, (state, action) => {
+		 state.tasks = action.payload
+	  })
+	  builder.addCase(deleteTaskById.fulfilled, (state, action) => {
+		 state.tasks = action.payload
+	  })
+	  builder.addCase(completeTask.fulfilled, (state, action) => {
+		 state.tasks = action.payload
 	  })
    }
 })
