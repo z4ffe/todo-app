@@ -1,0 +1,20 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "ToDo Application Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "server server.js",
+    "dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Lightman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-status": "^1.5.3",
+    "mongoose": "^6.7.1"
+  }
+}
