@@ -1,0 +1,42 @@
+.task {
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 10px;
+
+
+  .flag_btn {
+    width: 27px;
+    border: none;
+    background: none;
+    transition: .4s;
+  }
+
+  .task_container {
+    overflow: hidden;
+  }
+
+  .dropdown_btn {
+    width: 20px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: 1.2rem;
+    border: none;
+    background: none;
+    transition: .3s;
+
+    img {
+      width: 24px;
+    }
+
+    &:hover {
+      transform: scale(103%);
+    }
+
+    &:active {
+      transform: scale(97%);
+    }
+  }
+}

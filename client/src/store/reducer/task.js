@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {addTask, completeTask, deleteTaskById, fetchAllTasks, flagTask} from "../thunk/taskThunk";
+import {addTask, completeTask, deleteAllTasks, deleteTaskById, fetchAllTasks, flagTask} from "../thunk/taskThunk";
 
 export const taskSlice = createSlice({
    name: "task",
@@ -8,7 +8,8 @@ export const taskSlice = createSlice({
 	  tasksFiltered: [],
 	  loading: true,
 	  searchMode: false,
-	  userInput: ''
+	  userInput: '',
+	  completed: 0,
    },
    reducers: {
 	  setSearchMode: (state) => {
@@ -42,7 +43,9 @@ export const taskSlice = createSlice({
 		 state.tasks = action.payload
 	  })
 	  builder.addCase(flagTask.fulfilled, (state, action) => {
-		 console.log(action.payload)
+		 state.tasks = action.payload
+	  })
+	  builder.addCase(deleteAllTasks.fulfilled, (state, action) => {
 		 state.tasks = action.payload
 	  })
    }

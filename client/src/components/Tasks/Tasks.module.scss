@@ -1,0 +1,11 @@
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 92%;
+  margin-top: 15px;
+  overflow: scroll;
+  height: 380px;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+}

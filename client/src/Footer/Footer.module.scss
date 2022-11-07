@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  background-color: #F7F7F7;
+  height: 55px;
+  width: 100%;
+  bottom: 0;
+  border-top: .1px solid #CBCBCB;
+
+  button {
+    border: none;
+    background: none;
+    color: #3478F6;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      transform: scale(102%);
+    }
+
+    &:active {
+      transform: scale(98%);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  background-color: #F7F7F7;
+  height: 55px;
+  width: 100%;
+  bottom: 0;
+  border-top: 0.1px solid #CBCBCB;
+}
+.footer button {
+  border: none;
+  background: none;
+  color: #3478F6;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer button:hover {
+  transform: scale(102%);
+}
+.footer button:active {
+  transform: scale(98%);
+}
+
+/*# sourceMappingURL=Footer.module.css.map */

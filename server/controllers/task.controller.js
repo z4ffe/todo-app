@@ -63,7 +63,8 @@ const taskController = {
    async removeAllTasks(req, res, next) {
 	  try {
 		 await Task.deleteMany({})
-		 res.status(httpStatus.OK).send('All tasks deleted')
+		 const taskList = await Task.find({})
+		 res.status(httpStatus.OK).send(taskList)
 	  } catch (error) {
 		 next(error)
 	  }

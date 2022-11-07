@@ -55,3 +55,12 @@ export const deleteTaskById = createAsyncThunk('Task/deleteTaskById', async (dat
 	  throw error
    }
 })
+
+export const deleteAllTasks = createAsyncThunk('Task/deleteAllTasks', async (data) => {
+   try {
+	  const response = await axios.delete(`${process.env.REACT_APP_SERVER}/api/removeall`, {})
+	  return response.data
+   } catch (error) {
+	  throw error
+   }
+})
