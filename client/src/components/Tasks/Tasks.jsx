@@ -1,6 +1,6 @@
 import React from 'react';
 import Task from "../Task/Task";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 const Tasks = () => {
    const storeTasks = useSelector(state => state.task)

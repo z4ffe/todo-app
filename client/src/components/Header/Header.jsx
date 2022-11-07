@@ -1,13 +1,11 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAllTasks, addTask} from "../../store/thunk/taskThunk";
-import Task from "../Task/Task";
-import {setSearchMode} from "../../store/reducer/task";
+import {changeUserInput, setSearchMode} from "../../store/reducer/task";
 
 const Header = () => {
    const dispatch = useDispatch()
    const storeTasks = useSelector(state => state.task)
-   const inputTask = useRef()
 
    useEffect(() => {
 	  dispatch(fetchAllTasks())
@@ -19,8 +17,8 @@ const Header = () => {
 		 <button onClick={() => dispatch(setSearchMode())}>SEARCH MODE</button>
 		 {storeTasks.searchMode ? <span>Search On</span> : <span>Search Off</span>}
 		 <hr/>
-		 <input type="text" ref={inputTask}/>
-		 <button onClick={() => dispatch(addTask(inputTask.current.value))}>ADD</button>
+		 <input type="text" onChange={(e) => dispatch(changeUserInput(e.target.value))}/>
+		 <button onClick={() => dispatch(addTask(storeTasks.userInput))}>ADD</button>
 		 <hr/>
 	  </div>
    );

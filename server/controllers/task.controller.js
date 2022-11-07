@@ -32,7 +32,6 @@ const taskController = {
 	  }
    },
    async completeTask(req, res, next) {
-	  console.log(req.body)
 	  try {
 		 const task = await taskService.changeTaskStatusToComplete(req.body._id)
 		 const taskList = await Task.find({})
@@ -40,6 +39,16 @@ const taskController = {
 	  } catch (error) {
 		 next(error)
 	  }
+   },
+   async flagTask(req, res, next) {
+	  try {
+		 const task = await taskService.changeTaskFlag(req.body._id)
+		 const taskList = await Task.find({})
+		 res.status(httpStatus.OK).send(taskList)
+	  } catch (error) {
+		 throw error
+	  }
+
    },
    async removeTask(req, res, next) {
 	  try {

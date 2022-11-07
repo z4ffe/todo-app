@@ -1,16 +1,24 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {addTask, completeTask, deleteTaskById, fetchAllTasks} from "../thunk/taskThunk";
+import {addTask, completeTask, deleteTaskById, fetchAllTasks, flagTask} from "../thunk/taskThunk";
 
 export const taskSlice = createSlice({
    name: "task",
    initialState: {
 	  tasks: [],
+	  tasksFiltered: [],
 	  loading: true,
-	  searchMode: false
+	  searchMode: false,
+	  userInput: ''
    },
    reducers: {
 	  setSearchMode: (state) => {
 		 state.searchMode = !state.searchMode
+	  },
+	  changeUserInput: (state, action) => {
+		 state.userInput = action.payload
+	  },
+	  setFilteredTasks: (state, action) => {
+		 state.tasksFiltered = action.payload
 	  }
    },
    extraReducers: (builder) => {
@@ -33,8 +41,12 @@ export const taskSlice = createSlice({
 	  builder.addCase(completeTask.fulfilled, (state, action) => {
 		 state.tasks = action.payload
 	  })
+	  builder.addCase(flagTask.fulfilled, (state, action) => {
+		 console.log(action.payload)
+		 state.tasks = action.payload
+	  })
    }
 })
 
-export const {setSearchMode} = taskSlice.actions
+export const {setSearchMode, changeUserInput, setFilteredTasks} = taskSlice.actions
 export default taskSlice.reducer

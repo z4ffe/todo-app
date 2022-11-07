@@ -4,6 +4,16 @@ const findTaskId = async (task) => {
    return Task.findOne({task: task});
 }
 
+const changeTaskFlag = async (id) => {
+   try {
+	  const task = await Task.findById(id)
+	  if (!task.flag) return Task.findByIdAndUpdate({_id: id}, {"$set": {flag: true}}, {new: true})
+	  else return Task.findByIdAndUpdate({_id: id}, {"$set": {flag: false}}, {new: true})
+   } catch (error) {
+	  throw error
+   }
+}
+
 const changeTaskStatusToComplete = async (id) => {
    try {
 	  const task = await Task.findById(id)
@@ -14,4 +24,4 @@ const changeTaskStatusToComplete = async (id) => {
    }
 }
 
-module.exports = {findTaskId, changeTaskStatusToComplete}
+module.exports = {findTaskId, changeTaskStatusToComplete, changeTaskFlag}

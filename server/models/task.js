@@ -8,6 +8,10 @@ const taskSchema = mongoose.Schema({
 	  minLength: 1,
 	  trim: true
    },
+   flag: {
+	  type: Boolean,
+	  default: false
+   },
    status: {
 	  type: Boolean,
 	  default: false
