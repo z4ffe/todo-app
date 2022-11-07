@@ -43,7 +43,6 @@ const taskController = {
    },
    async removeTask(req, res, next) {
 	  try {
-		 console.log(req.body._id)
 		 const deletedTask = await Task.findByIdAndDelete(req.body._id)
 		 if (!deletedTask) res.status(httpStatus.NOT_FOUND).send('Task not found')
 		 const taskList = await Task.find({})

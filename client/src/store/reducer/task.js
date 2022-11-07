@@ -5,9 +5,14 @@ export const taskSlice = createSlice({
    name: "task",
    initialState: {
 	  tasks: [],
-	  loading: true
+	  loading: true,
+	  searchMode: false
    },
-   reducers: {},
+   reducers: {
+	  setSearchMode: (state) => {
+		 state.searchMode = !state.searchMode
+	  }
+   },
    extraReducers: (builder) => {
 	  builder.addCase(fetchAllTasks.pending, (state) => {
 		 state.loading = true
@@ -31,4 +36,5 @@ export const taskSlice = createSlice({
    }
 })
 
+export const {setSearchMode} = taskSlice.actions
 export default taskSlice.reducer
