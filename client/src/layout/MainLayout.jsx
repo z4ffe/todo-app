@@ -7,12 +7,13 @@ import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const MainLayout = (props) => {
-   let date = new Date()
-   const [time, setTime] = useState(`${date.toLocaleTimeString().slice(0, 5)}`)
+
+   const [time, setTime] = useState(new Date().toTimeString().slice(0, 5))
 
    const timeUpdate = () => {
 	  setInterval(() => {
-		 setTime(() => (`${date.toLocaleTimeString().slice(0, 5)}`))
+		 let date = new Date()
+		 setTime(`${date.toTimeString().slice(0, 5)}`)
 	  }, 1000)
    }
 
@@ -21,7 +22,7 @@ const MainLayout = (props) => {
 	  return () => {
 		 timeUpdate()
 	  }
-   })
+   }, [])
 
    return (
 	  <div className={styles.wrapper}>

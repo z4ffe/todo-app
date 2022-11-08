@@ -4,10 +4,13 @@
   align-self: center;
   width: 92%;
   margin-top: 1.1rem;
-  overflow: scroll;
+  overflow: auto;
   height: 380px;
   background-color: #fff;
   border-radius: 10px 10px 0 0;
+}
+.tasks::-webkit-scrollbar {
+  display: none;
 }
 
 /*# sourceMappingURL=Tasks.module.css.map */

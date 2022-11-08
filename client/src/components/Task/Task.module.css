@@ -13,6 +13,7 @@
   background: none;
   transition: 0.4s;
   display: flex;
+  z-index: 999;
 }
 .task .flag_btn img {
   align-self: center;
@@ -23,10 +24,10 @@
   width: 80%;
 }
 .task .dropdown_btn {
-  width: 20px;
+  width: 30px;
   height: 25px;
   margin-left: auto;
-  margin-right: 1.2rem;
+  margin-right: 0.7rem;
   border: none;
   background: none;
   transition: 0.3s;
@@ -60,6 +61,7 @@
 
 .dropdown_animationExitDone {
   opacity: 0;
+  display: none;
 }
 
 /*# sourceMappingURL=Task.module.css.map */
