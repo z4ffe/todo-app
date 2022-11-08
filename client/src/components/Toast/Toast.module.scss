@@ -1,0 +1,39 @@
+.toast {
+  display: grid;
+  grid-template-rows: 22px 1fr;
+  grid-template-columns: 35px 1fr 30px;
+  height: 40px;
+  grid-template-areas: "image title date"
+                        "image description description";
+
+  img {
+    width: 40px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+    border-radius: 10px;
+    grid-area: image;
+    margin-top: 2px;
+  }
+
+  .toast_title {
+    padding-left: 15px;
+    color: black;
+    grid-area: title;
+    font-weight: 500;
+    font-size: 0.93rem;
+    align-self: center;
+  }
+
+  .toast_desc {
+    padding-left: 15px;
+    font-size: 0.93rem;
+    color: #696969;
+    grid-area: description;
+  }
+
+  .toast_now {
+    grid-area: date;
+    font-size: 12px;
+  }
+}

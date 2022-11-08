@@ -17,7 +17,7 @@ const changeTaskFlag = async (id) => {
 const changeTaskStatusToComplete = async (id) => {
    try {
 	  const task = await Task.findById(id)
-	  if (!task.status) return Task.findByIdAndUpdate({_id: id}, {"$set": {status: true}}, {new: true})
+	  if (!task.status) return Task.findByIdAndUpdate({_id: id}, {"$set": {status: true, flag: false}}, {new: true})
 	  else return Task.findByIdAndUpdate({_id: id}, {"$set": {status: false}}, {new: true})
    } catch (error) {
 	  throw error

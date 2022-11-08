@@ -11,7 +11,7 @@
       background-color: #E3E3E8;
       border: none;
       border-radius: 7px;
-      height: 32px;
+      height: 35px;
       padding-left: 10px;
       width: 89%;
       margin: 0 auto;
@@ -20,24 +20,24 @@
       -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
       box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
       transition: .4s ease-out;
+      caret-color: #3478F6;
+      font-family: "SF Pro Display", sans-serif !important;
     }
 
     input::placeholder {
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "SF Pro Display", sans-serif !important;
     }
 
     input:focus {
       outline: none;
-      -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px;
-      -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px;
-      box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px;
     }
 
     .search_btn {
       position: absolute;
       right: 3.1rem;
-      top: 0.4rem;
+      top: 0.5rem;
       background: none;
       border: none;
       fill: gray;
@@ -48,35 +48,28 @@
     .add_btn {
       position: absolute;
       right: 1.3rem;
-      top: 0.4rem;
+      top: 0.5rem;
       background: none;
       border: none;
-      fill: #262626;
+      fill: #3478F6;
       transition: .4s;
       cursor: pointer;
 
-      &:hover {
-        right: 1.42rem;
-        top: 0.28rem;
-        transform: rotate(90deg);
-        fill: #307a30;
-      }
-
       &:active {
-        transform: scale(95%) rotate(90deg);
+        transform: scale(95%);
       }
     }
   }
 }
 
-
 .search_btn_active {
   position: absolute;
   right: 1.3rem;
-  top: 0.4rem;
+  top: 0.5rem;
   background: none;
   border: none;
   fill: black;
   transition: .4s;
   cursor: pointer;
+  z-index: 100;
 }

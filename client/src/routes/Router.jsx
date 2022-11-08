@@ -7,6 +7,7 @@ import {useSelector} from "react-redux";
 import Search from "../components/Search/Search";
 import Tiles from "../components/Tiles/Tiles";
 import Footer from "../Footer/Footer";
+import {ToastContainer} from "react-toastify";
 
 const Router = () => {
    const storeTasks = useSelector(state => state.task)

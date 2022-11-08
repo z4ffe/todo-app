@@ -3,6 +3,8 @@ import styles from './Layout.module.css'
 import battery from '../images/svg/battery.svg'
 import cellular from '../images/svg/cellular.svg'
 import wifi from '../images/svg/wifi.svg'
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const MainLayout = (props) => {
    let date = new Date()
@@ -32,6 +34,7 @@ const MainLayout = (props) => {
 		 <div className={styles.frame}></div>
 		 <div className={styles.camera}></div>
 		 <div className={styles.speaker}></div>
+		 <ToastContainer limit={3}/>
 		 {props.children}
 	  </div>
    );

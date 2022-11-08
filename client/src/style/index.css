@@ -4,3 +4,24 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.Toastify__toast-container--top-center {
+    top: 4rem !important
+}
+
+.Toastify__toast {
+    border-radius: 15px !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    width: 320px !important;
+    margin: 0 auto !important;
+}
+
+.Toastify__toast-body {
+    font-family: "SF Pro Display", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.1rem;
+    padding: 0 !important;
+    display: block !important;
+    margin-left: 0.5rem !important;
+}

@@ -10,11 +10,11 @@ const Search = () => {
 
 
    useEffect(() => {
-	  dispatch(setFilteredTasks(storeTasks.tasks.filter(el => el.task.includes(storeTasks.userInput))))
+	  dispatch(setFilteredTasks(storeTasks.tasks.filter(el => el.task.toLowerCase().includes(storeTasks.userInput.toLowerCase()))))
    }, [storeTasks.tasks])
 
    useEffect(() => {
-	  dispatch(setFilteredTasks(storeTasks.tasks.filter(el => el.task.includes(storeTasks.userInput))))
+	  dispatch(setFilteredTasks(storeTasks.tasks.filter(el => el.task.toLowerCase().includes(storeTasks.userInput.toLowerCase()))))
    }, [storeTasks.userInput])
 
    return (

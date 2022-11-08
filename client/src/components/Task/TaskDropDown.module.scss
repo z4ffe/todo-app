@@ -2,36 +2,48 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 120px;
-  height: 100px;
+  width: 160px;
   border-radius: 10px;
   top: .7rem;
   right: 2.2rem;
-  background-color: #F5F5F5;
+  background-color: rgba(246, 245, 245, 0.98);
   z-index: 999;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
-  gap: 5px;
+  overflow: hidden;
 
   .date {
     width: 100%;
-    text-align: center;
+    text-align: start;
+    padding-left: 14px;
     padding-bottom: 2px;
-    font-size: 12px;
-    margin: 5px auto 0;
-    border-bottom: .1px solid #CBCBCB;
+    font-size: 15px;
+    height: 27px;
+    padding-top: 10px;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   button {
-    width: 50px;
-    text-align: center;
+    width: 100%;
+    height: 37px;
+    text-align: start;
     background: none;
     border: none;
     font-size: 16px;
+    border-top: .1px solid #CBCBCB;
+    padding-left: 15px;
+    cursor: pointer;
+    transition: .3s;
+
+    &:active {
+      background-color: #DFDFDF;
+    }
   }
 
   .delete_btn {
-    color: red
+    color: #FE3B30;
   }
 }
+

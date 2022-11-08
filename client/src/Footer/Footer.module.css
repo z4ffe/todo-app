@@ -15,9 +15,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
-}
-.footer button:hover {
-  transform: scale(102%);
+  font-family: "SF Pro Display", sans-serif;
 }
 .footer button:active {
   transform: scale(98%);
