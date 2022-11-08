@@ -30,7 +30,7 @@ const Task = ({props}) => {
 	  <div className={styles.task} key={props._id} ref={taskContainer}>
 		 {!props.status ? <div className={styles.task_container}>{props.task}</div> :
 			<div style={{color: "#8A8A8D"}}>{props.task}</div>}
-		 {props.flag && <button className={styles.flag_btn} onClick={() => dispatch(flagTask(props))}><img src={flagged} alt=""/></button>}
+		 {(props.flag && !props.status) && <button className={styles.flag_btn} onClick={() => dispatch(flagTask(props))}><img src={flagged} alt=""/></button>}
 		 <button className={styles.dropdown_btn} onClick={() => setMenu(!menu)}><img src={menu ? dropDownIconActive : dropDownIcon} alt=""/>
 		 </button>
 		 <CSSTransition nodeRef={dropDownMenu} in={menu} timeout={100} classNames={{

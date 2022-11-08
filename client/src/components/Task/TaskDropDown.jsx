@@ -15,7 +15,7 @@ const TaskDropDown = ({props}) => {
    return (
 	  <div className={styles.task_dropdown}>
 		 {<div className={styles.date}>{`${new Date(props.date).toLocaleString({}, options).slice()}`}</div>}
-		 <button onClick={() => dispatch(flagTask(props))}>{props.flag ? 'Unflag':'Flag'}</button>
+		 {!props.status && <button onClick={() => dispatch(flagTask(props))}>{props.flag ? 'Unflag':'Flag'}</button>}
 		 <button onClick={() => dispatch(completeTask(props))}>{props.status ? 'Incomplete' : "Complete"}</button>
 		 <button className={styles.delete_btn} onClick={() => dispatch(deleteTaskById(props))}>Delete</button>
 	  </div>
