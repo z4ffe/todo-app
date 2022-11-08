@@ -105,4 +105,3 @@ Temporary Items
 .idea/*
 server/.env
 /server/node_modules
-/client/build
