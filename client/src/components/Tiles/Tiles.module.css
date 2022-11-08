@@ -31,20 +31,23 @@
   border-radius: 50%;
 }
 .tiles .tiles_container .alltasks_icon {
-  background-color: #101010;
+  margin: 0.2rem 0 0 0.3rem;
+  width: 30px;
 }
 .tiles .tiles_container .flagged_icon {
-  background-color: #FF9500;
+  margin: 0.2rem 0 0 0.3rem;
+  width: 30px;
 }
 .tiles .tiles_container .completed_icon {
   background-color: #5B6770;
+  margin-bottom: 2px;
 }
 .tiles .tiles_container .tiles_title {
   color: #8A8A8D;
   font-size: 1rem;
   font-weight: 600;
   padding-left: 12px;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 .tiles .tiles_container .tiles_count {
   text-align: right;

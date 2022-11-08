@@ -13,6 +13,12 @@
     border: none;
     background: none;
     transition: .4s;
+    display: flex;
+
+    img {
+      align-self: center;
+      width: 15px;
+    }
   }
 
   .task_container {
@@ -29,6 +35,8 @@
     background: none;
     transition: .3s;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 
     img {
       width: 24px;
@@ -41,18 +49,15 @@
 }
 
 .dropdown_animation {
-  display: none;
   opacity: 0;
-  transition: .5s;
+  transition: .1s;
 }
 
 .dropdown_animationEnterActive {
-  display: block;
   opacity: 0;
 }
 
 .dropdown_animationEnterDone {
-  display: block;
   opacity: 1;
 }
 

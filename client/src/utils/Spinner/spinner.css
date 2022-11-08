@@ -5,6 +5,7 @@ div.spinner {
     display: inline-block;
     margin-left: auto;
     margin-right: 42%;
+    margin-top: 20px;
     background: none;
     border-radius: 10px;
 }

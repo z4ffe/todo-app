@@ -6,14 +6,13 @@ import Tasks from "../components/Tasks/Tasks";
 import {useSelector} from "react-redux";
 import Search from "../components/Search/Search";
 import Tiles from "../components/Tiles/Tiles";
-import Footer from "../Footer/Footer";
-import {ToastContainer} from "react-toastify";
+import Footer from "../components/Footer/Footer";
 
 const Router = () => {
    const storeTasks = useSelector(state => state.task)
 
    return (
-	  <HashRouter>
+	  <HashRouter basename='/'>
 		 <MainLayout>
 			<Tiles/>
 			<Header/>

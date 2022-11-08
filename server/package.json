@@ -4,9 +4,10 @@
   "description": "ToDo Application Project",
   "main": "index.js",
   "scripts": {
-    "start": "server server.js",
-    "dev": "nodemon server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": " server.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "nodemon ../producation/server.js"
   },
   "author": "Paul Lightman",
   "license": "ISC",

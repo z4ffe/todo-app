@@ -103,4 +103,6 @@ Temporary Items
 /.idea
 /node_modules
 .idea/*
-.env
+server/.env
+/server/node_modules
+/client/build

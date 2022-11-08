@@ -20,7 +20,7 @@
     height: 75px;
     width: 155px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
-    -moz-box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
 
     img {
@@ -32,16 +32,18 @@
     }
 
     .alltasks_icon {
-      background-color: #101010;
+      margin: 0.2rem 0 0 0.3rem;
+      width: 30px;
     }
 
     .flagged_icon {
-      background-color: #FF9500;
-
+      margin: 0.2rem 0 0 0.3rem;
+      width: 30px;
     }
 
     .completed_icon {
       background-color: #5B6770;
+      margin-bottom: 2px;
     }
 
     .tiles_title {
@@ -49,7 +51,7 @@
       font-size: 1rem;
       font-weight: 600;
       padding-left: 12px;
-      padding-top: 10px;
+      padding-top: 7px;
     }
 
     .tiles_count {

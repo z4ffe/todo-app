@@ -1,8 +1,8 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {deleteAllTasks} from "../store/thunk/taskThunk";
+import {deleteAllTasks} from "../../store/thunk/taskThunk";
 import styles from './Footer.module.css'
-import {ShowToast} from "../utils/toastConfig";
+import {ShowToast} from "../../utils/toastConfig";
 
 const Footer = () => {
    const dispatch = useDispatch()
