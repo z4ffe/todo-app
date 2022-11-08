@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8fe90c95.css",
+    "main.js": "/static/js/main.0b37bb5f.js",
+    "static/media/reminder-icon.png": "/static/media/reminder-icon.4eaf5a83618453636bdd.png",
+    "static/media/alltasks.svg": "/static/media/alltasks.3d4a88b46127d7dc7e8ec9c8b2327577.svg",
+    "static/media/flagged.svg": "/static/media/flagged.d770eacbad2896b69603ca9059b9cd97.svg",
+    "static/media/wifi.svg": "/static/media/wifi.3fd18715dd23a809b7279c32f68dfd57.svg",
+    "static/media/flagged-task.svg": "/static/media/flagged-task.fd471fce64cb9948a3f74e34e6448b88.svg",
+    "static/media/cellular.svg": "/static/media/cellular.80911c87ff0890f2823fbf57f8327c7f.svg",
+    "static/media/dropdown-active.svg": "/static/media/dropdown-active.5f44106d76ca83e04c7553680501732f.svg",
+    "static/media/dropdown.svg": "/static/media/dropdown.5d6100f3ade051e47e67d0141d42bf40.svg",
+    "static/media/battery.svg": "/static/media/battery.0fa9037d2ae367bf1f518c20aa0f46ea.svg",
+    "static/media/completed.svg": "/static/media/completed.cbd6339ffba3c7e6b9a439b2b556f1bb.svg",
+    "index.html": "/index.html",
+    "main.8fe90c95.css.map": "/static/css/main.8fe90c95.css.map",
+    "main.0b37bb5f.js.map": "/static/js/main.0b37bb5f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fe90c95.css",
+    "static/js/main.0b37bb5f.js"
+  ]
+}
