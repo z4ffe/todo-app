@@ -1,9 +1,11 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
 
+const HOST_URL = process.env.REACT_APP_SERVER || '/'
+
 export const fetchAllTasks = createAsyncThunk('Task/fetchAllTasks', async (data) => {
    try {
-	  const response = await axios.get(`${process.env.REACT_APP_SERVER}/api/tasks`)
+	  const response = await axios.get(`${HOST_URL}/api/tasks`)
 	  return response.data
    } catch (error) {
 	  throw error
@@ -12,7 +14,7 @@ export const fetchAllTasks = createAsyncThunk('Task/fetchAllTasks', async (data)
 
 export const addTask = createAsyncThunk('Task/addTask', async (data) => {
    try {
-	  const response = await axios.post(`${process.env.REACT_APP_SERVER}/api/add`, {
+	  const response = await axios.post(`${HOST_URL}/api/add`, {
 		 task: data
 	  })
 	  return response.data
@@ -23,7 +25,7 @@ export const addTask = createAsyncThunk('Task/addTask', async (data) => {
 
 export const completeTask = createAsyncThunk('Task/completeTask', async (data) => {
    try {
-	  const response = await axios.patch(`${process.env.REACT_APP_SERVER}/api/complete`, {
+	  const response = await axios.patch(`${HOST_URL}/api/complete`, {
 		 _id: data._id
 	  })
 	  return response.data
@@ -34,7 +36,7 @@ export const completeTask = createAsyncThunk('Task/completeTask', async (data) =
 
 export const flagTask = createAsyncThunk('Task/flagTask', async (data) => {
    try {
-	  const response = await axios.patch(`${process.env.REACT_APP_SERVER}/api/flag`, {
+	  const response = await axios.patch(`${HOST_URL}/api/flag`, {
 		 _id: data._id
 	  })
 	  return response.data
@@ -45,7 +47,7 @@ export const flagTask = createAsyncThunk('Task/flagTask', async (data) => {
 
 export const deleteTaskById = createAsyncThunk('Task/deleteTaskById', async (data) => {
    try {
-	  const response = await axios.delete(`${process.env.REACT_APP_SERVER}/api/remove`, {
+	  const response = await axios.delete(`${HOST_URL}/api/remove`, {
 		 data: {
 			_id: data._id
 		 }
@@ -58,7 +60,7 @@ export const deleteTaskById = createAsyncThunk('Task/deleteTaskById', async (dat
 
 export const deleteAllTasks = createAsyncThunk('Task/deleteAllTasks', async (data) => {
    try {
-	  const response = await axios.delete(`${process.env.REACT_APP_SERVER}/api/removeall`, {})
+	  const response = await axios.delete(`${HOST_URL}/api/removeall`, {})
 	  return response.data
    } catch (error) {
 	  throw error
