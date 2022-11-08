@@ -23,3 +23,9 @@
     }
   }
 }
+
+@media only screen and (min-width: 355px) and (max-width: 767px) {
+  .footer {
+    border-radius: 0;
+  }
+}

@@ -22,4 +22,10 @@
   transform: scale(98%);
 }
 
+@media only screen and (min-width: 355px) and (max-width: 767px) {
+  .footer {
+    border-radius: 0;
+  }
+}
+
 /*# sourceMappingURL=Footer.module.css.map */
