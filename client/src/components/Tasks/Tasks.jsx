@@ -10,10 +10,10 @@ const Tasks = () => {
    return (
 	  <div className={styles.tasks}>
 		 {!storeTasks.loading && storeTasks.tasks.map((task) => {
-			if (task.flag) return (<Task key={task._id} props={task}/>)
+			if (task.flag && !task.status) return (<Task key={task._id} props={task}/>)
 		 })}
 		 {storeTasks.loading ? <Spinner/> : storeTasks.tasks.map((task) => {
-			if (!task.status && !task.flag) return (<Task key={task._id} props={task}/>)
+			if ((!task.status && !task.flag)) return (<Task key={task._id} props={task}/>)
 		 })}
 		 {!storeTasks.loading && storeTasks.tasks.map((task) => {
 			if (task.status) return (<Task key={task._id} props={task}/>)

@@ -34,6 +34,7 @@ const Task = ({props}) => {
 		 <button className={styles.dropdown_btn} onClick={() => setMenu(!menu)}><img src={menu ? dropDownIconActive : dropDownIcon} alt=""/>
 		 </button>
 		 <CSSTransition nodeRef={dropDownMenu} in={menu} timeout={100} classNames={{
+			enterActive: styles.dropdown_animationEnterActive,
 			enterDone: styles.dropdown_animationEnterDone,
 			exitDone: styles.dropdown_animationExitDone
 		 }}>

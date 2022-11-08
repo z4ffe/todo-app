@@ -35,6 +35,7 @@
   padding-left: 15px;
   cursor: pointer;
   transition: 0.3s;
+  font-family: "Helvetica Neue", sans-serif;
 }
 .task_dropdown button:active {
   background-color: #DFDFDF;

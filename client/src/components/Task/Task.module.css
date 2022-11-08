@@ -13,7 +13,7 @@
   background: none;
   transition: 0.4s;
   display: flex;
-  z-index: 999;
+  z-index: 99;
 }
 .task .flag_btn img {
   align-self: center;
@@ -43,25 +43,33 @@
 }
 
 .dropdown_animation {
+  display: none;
   opacity: 0;
-  transition: 0.1s;
+  transition: 0.3s;
+  z-index: 9999;
 }
 
 .dropdown_animationEnterActive {
+  display: block;
   opacity: 0;
+  z-index: 9999;
 }
 
 .dropdown_animationEnterDone {
+  display: block;
   opacity: 1;
+  z-index: 9999;
 }
 
 .dropdown_animationExitActive {
   opacity: 0;
+  z-index: 9999;
 }
 
 .dropdown_animationExitDone {
   opacity: 0;
   display: none;
+  z-index: 9999;
 }
 
 /*# sourceMappingURL=Task.module.css.map */

@@ -21,12 +21,12 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
   transition: 0.4s ease-out;
   caret-color: #3478F6;
-  font-family: "SF Pro Display", sans-serif !important;
+  font-family: "Helvetica Neue", sans-serif !important;
 }
 .header_controls input::placeholder {
   font-size: 16px;
   font-weight: 400;
-  font-family: "SF Pro Display", sans-serif !important;
+  font-family: "Helvetica Neue", sans-serif !important;
 }
 .header_controls input:focus {
   outline: none;
