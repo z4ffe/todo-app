@@ -12,10 +12,11 @@ const Header = () => {
 
    const newTask = () => {
 	  if (!storeTasks.userInput) {
-			ShowToast('notification', `New task can't be empty`)
+		 ShowToast('notification', `New task can't be empty`)
 		 return
 	  }
-	  dispatch(addTask(storeTasks.userInput))
+	  console.log(storeTasks.tasks.length)
+	  dispatch(addTask({task: storeTasks.userInput, order: storeTasks.tasks.length + 1}))
 	  dispatch(changeUserInput(''))
 	  userInput.current.value = ''
    }

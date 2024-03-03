@@ -43,8 +43,7 @@ const Task = ({props}) => {
 			</div>
 		 </CSSTransition>
 	  </div>
-   )
-	  ;
+   );
 };
 
 export default Task;
