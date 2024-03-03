@@ -11,7 +11,7 @@ mongoose.connect(DB)
 
 //
 
-app.use(cors({origin: "http://localhost:4004"}));
+app.use(cors({origin: "https://todo-app-ios.vercel.app"}));
 app.use(bodyParser.json())
 
 //
