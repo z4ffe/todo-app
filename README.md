@@ -4,4 +4,4 @@
 <hr>
 <div align="center" ><a href="https://todo-app-ios.vercel.app">Vercel preview</a></div>
 <hr>
-<div align="center" ><img width="300"src="https://pavelkuliasov.netlify.app/img/portfolio/todo-list.png" alt="Todoap"></div>
+<div align="center" ><img width="300"src="preview.png" alt="Todoap"></div>
