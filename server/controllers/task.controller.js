@@ -7,7 +7,7 @@ const taskController = {
 	  try {
 		 const filter = {}
 		 const taskList = await Task.find(filter)
-		 res.json(taskList)
+		 res.json(taskList.sort((x, y) => x.order - y.order))
 	  } catch (error) {
 		 next(error)
 	  }
@@ -23,10 +23,10 @@ const taskController = {
    },
    async addTask(req, res, next) {
 	  try {
-		 const task = new Task({task: req.body.task})
+		 const task = new Task({task: req.body.task.task, order: req.body.task.order})
 		 await task.save()
 		 const taskList = await Task.find({})
-		 res.status(httpStatus.CREATED).send(taskList)
+		 res.status(httpStatus.CREATED).send(taskList.sort((x, y) => x.order - y.order))
 	  } catch (error) {
 		 next(error)
 	  }

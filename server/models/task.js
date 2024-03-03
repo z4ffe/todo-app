@@ -19,6 +19,11 @@ const taskSchema = mongoose.Schema({
    date: {
 	  type: Date,
 	  default: Date.now
+   },
+   order: {
+	  type: String,
+	  default: 1,
+	  unique: true
    }
 })
 
